@@ -16,10 +16,12 @@ exports.login = async (req, res) => {
 
   } catch (error) {
 
-    res.status(401).json({ error: error.message });
-
+    res.status(401).json({
+      mensaje: "Error registrando usuario",
+      error: error.message,
+      errorCode: error.code || "REGISTRATION_ERROR"
+    });
   }
-
 };
 
 
