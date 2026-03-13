@@ -39,6 +39,7 @@ exports.register = async (req, res) => {
   } catch (error) {
 
     res.status(400).json({
+      mensaje: "Error registrando usuario",
       error: error.message,
       errorCode: error.code || "REGISTRATION_ERROR"
     });
