@@ -33,7 +33,7 @@ const loginLimiter = rateLimit({
 });
 
 
-router.post("/register",controller.register);
+router.post("/register",validateRegister,controller.register);
 router.post("/login", loginLimiter, validateLogin, controller.login);
 router.post("/refresh", controller.refresh);
 router.get("/me",authMiddleware,controller.me);
