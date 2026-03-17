@@ -7,7 +7,7 @@ const rateLimit = require("express-rate-limit");
 const validateLogin = require("../middleware/validateLogin");
 const validateRegister = require("../middleware/validateRegister");
 
-const WINDOW_MS = 60 * 1000; // 1 minuto
+const WINDOW_MS = 60 * 1000; // 1 minutos
 
 
 const loginLimiter = rateLimit({
