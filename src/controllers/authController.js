@@ -19,13 +19,13 @@ exports.login = async (req, res) => {
     res.status(401).json({
       mensaje: "Error de Log In",
       error: error.message,
-      errorCode: error.code || "LOGIN_ERROR",
-      claves_secretas: process.env.JWT_SECRET + " | " + process.env.JWT_REFRESH_SECRET,
-      db_host: process.env.DB_HOST,
-      db_user: process.env.DB_USER,
-      db_password: process.env.DB_PASSWORD,
-      db_name: process.env.DB_NAME,
-      db_port: process.env.DB_PORT
+      errorCode: error.code || "LOGIN_ERROR"
+      // claves_secretas: process.env.JWT_SECRET + " | " + process.env.JWT_REFRESH_SECRET,
+      // db_host: process.env.DB_HOST,
+      // db_user: process.env.DB_USER,
+      // db_password: process.env.DB_PASSWORD,
+      // db_name: process.env.DB_NAME,
+      // db_port: process.env.DB_PORT
     });
   }
 };
